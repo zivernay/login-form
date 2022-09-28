@@ -128,6 +128,12 @@
  custom styles
  ================
  */
+
+ /*
+ ============
+ header
+ ============
+ */
  .visual {
   background: #000 url(./img/tree-bg-s.jpg);
   background-repeat: no-repeat;
@@ -149,6 +155,68 @@
   font-size: 72px;
   text-transform: uppercase;
  }
+ .credits,
+ .tip {
+  font-size: 10px;
+  text-align: center;
+}
+.credits {
+  text-shadow: 1px 3px 3px #000;
+}
+.credits i {
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-family: monospace;
+  text-decoration: underline;
+  line-height: 2;
+}
+.caution {
+  color: #f00;
+  font-weight: 700;
+} 
+
+/*
+===================
+notice
+==================
+*/
+.notice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(238, 238, 238, 0.25);
+}
+.notice p {
+  text-align: justify;
+  margin: auto 0;
+}
+
+/*
+===============
+inputs
+===============
+*/
+.inputs {
+  box-shadow: 0 5px 2em #ccc ;
+}
+.inputs h2{
+  margin-bottom: 1em;
+}
+.inputs label {
+  font-size: 60%;
+  line-height: 2;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.submit {
+  background-color: rgba(238, 238, 238, 0.25);
+}
+
+
 /*
    ============
    layout
@@ -185,7 +253,6 @@ figure {
   bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
 }
 .main > .notice {
     min-height: 40vh;
@@ -193,10 +260,11 @@ figure {
 div[class^="user-"] {
     align-items: flex-start;
     width: 100%;
-    margin-bottom: 1.6em;
-    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    padding: 0 1em;
 }
-.inputs input {
+.inputs input,
+h2 {
     width: 100%;
 }
 
@@ -217,7 +285,7 @@ div[class^="user-"] {
         flex: 1 0 auto;
         display: flex;
         flex-flow: column nowrap;
-        justify-content: center;
+        justify-content: stretch
     }
     .engage {
         display: none;
@@ -225,10 +293,13 @@ div[class^="user-"] {
     .main > .notice {
         min-height: auto;
     }
-    .notice,
-    .form-sign-up,
-    .submit {
-        width: clamp(360px, 100%, 720px);
+    .notice > *,
+    .form-sign-up > *,
+    .submit > *{
+      width: (360px, 100%, 720px);
+    }
+    .notice {
+      height: 30%;
     }
     div[class^="user-"] {
         width: 50%;

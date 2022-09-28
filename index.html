@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="visual header">
-        <span class="credits">Photo by <i>authour</i></span>
+        <span class="credits">Photo by <i>author</i></span>
         <figure class="logo">
             <img src="./img/odin-lined.png" alt="Odin logo">
             <span class="logo-text">Odin</span>
@@ -18,9 +18,7 @@
     </header>
     <main class="main">
         <article class="notice">
-            <p class="disclaimer">This is <span class="caution">NOT</span> a real product</p>
-            <p class="description">You know you need something like this in your life to help you realise your  deepest dreams. <em>Sign up</em> now to get started</p>
-            <p class="motivation">You know what to.</p>
+            <p class="disclaimer">This is <span class="caution">NOT</span> a real product. sYou know you need something like this in your life to help you realise your  deepest dreams. <em>Sign up</em> now to get started. You know what to.</p>
             <div class="engage">
                 <a href="#sign-up" class="button">Sign up</a>
                 <p class="sing-in">Already have an account?. <a href="#">Sign in.</a></p>
@@ -28,31 +26,32 @@
         </article>
 
         <article class="form-sign-up" id="sign-up">
-            <h2>Let's do this!</h2>
             <form action="#" method="post">
                 <section class="inputs">
+                    <h2>Let's do this!</h2>
+                    <p class="tip">The required inputs are market with an asteriks <span aria-label="required">*</span></p>
                     <div class="user-firstname">
-                        <label for="fname">First name</label>
+                        <label for="fname">First name <span aria-label="required">*</span></label>
                         <input type="text" name="firstName" id="fname" required>
                     </div>
                     <div class="user-lastname">
-                        <label for="lname">Last name</label>
+                        <label for="lname">Last name <span aria-label="required">*</span></label>
                         <input type="text" name="lastname" id="lname" required>
                     </div>
                     <div class="user-email">
-                        <label for="email">Email</label>
+                        <label for="email">Email <span aria-label="required">*</span></label>
                         <input type="email" name="useremail" id="email" required>
                     </div>
                     <div class="user-phone">
-                        <label for="phone">Phone</label>
+                        <label for="phone">Phone <span aria-label="required">*</span></label>
                         <input type="tel" name="phone" id="phone" required>
                     </div>
                     <div class="user-password">
-                        <label for="pwd">Password</label>
+                        <label for="pwd">Password <span aria-label="required">*</span></label>
                         <input type="password" name="userpassword" id="pwd" required>
                     </div>
                     <div class="user-confirm-password">
-                        <label for="pwd2">Confirm password</label>
+                        <label for="pwd2" title="Confirm password">Confirm password <span aria-label="required">*</span></label>
                         <input type="password" name="" id="pwd2" required>
                     </div>
                 </section>
