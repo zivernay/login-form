@@ -159,6 +159,9 @@
  .tip {
   font-size: 10px;
   text-align: center;
+  text-align: right;
+  padding: 0.25em 1em;
+  opacity: 60%;
 }
 .credits {
   text-shadow: 1px 3px 3px #000;
@@ -264,7 +267,8 @@ div[class^="user-"] {
     padding: 0 1em;
 }
 .inputs input,
-h2 {
+h2,
+p {
     width: 100%;
 }
 
