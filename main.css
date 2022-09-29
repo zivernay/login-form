@@ -128,6 +128,51 @@
  custom styles
  ================
  */
+.main {
+  background-color: #eee;
+}
+ .button,
+ a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+ }
+.button {
+  background-color: #596D48;
+  padding: 1em 2.5em;
+  border-radius: 0.5em;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+ }
+.credits,
+ .tip,
+ .sign-in {
+  font-size: 0.6rem;
+  text-align: center;
+  text-align: right;
+  padding: 0.25em 1em;
+  opacity: 60%;
+}
+.sign-in {
+  text-align: center;
+}
+.credits {
+  text-shadow: 1px 3px 3px #000;
+}
+
+.credits i {
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-family: monospace;
+  text-decoration: underline;
+  line-height: 2;
+}
+.caution {
+  color: #f00;
+  font-weight: 700;
+} 
 
  /*
  ============
@@ -155,29 +200,7 @@
   font-size: 72px;
   text-transform: uppercase;
  }
- .credits,
- .tip {
-  font-size: 10px;
-  text-align: center;
-  text-align: right;
-  padding: 0.25em 1em;
-  opacity: 60%;
-}
-.credits {
-  text-shadow: 1px 3px 3px #000;
-}
-.credits i {
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  font-family: monospace;
-  text-decoration: underline;
-  line-height: 2;
-}
-.caution {
-  color: #f00;
-  font-weight: 700;
-} 
-
+ 
 /*
 ===================
 notice
@@ -271,7 +294,9 @@ h2,
 p {
     width: 100%;
 }
-
+.submit {
+  margin: 1em 0 auto;
+}
 @media screen and (min-width:480px) {
     body,
     .inputs {
@@ -298,9 +323,9 @@ p {
         min-height: auto;
     }
     .notice > *,
-    .form-sign-up > *,
-    .submit > *{
-      width: (360px, 100%, 720px);
+    .inputs,
+    .submit {
+      width: clamp(360px, 100%, 720px);
     }
     .notice {
       height: 30%;
