@@ -128,6 +128,10 @@
  custom styles
  ================
  */
+ :root {
+  --invalid-input-color: #f00;
+  --valid-input-color: #596D48;
+ }
 .main {
   background-color: #eee;
 }
@@ -174,7 +178,42 @@ a {
   color: #f00;
   font-weight: 700;
 } 
-
+/*
+=============
+Form styling
+=============
+*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  padding: 0.3em 0.5em;
+  border: 1px solid #E5E7EB;
+  outline: none;
+  border-radius: 0.25em;
+}
+input[type="text"] {
+  text-transform: capitalize;
+}
+input[type="email"] {
+  text-transform: lowercase;
+}
+input:focus:invalid,
+input:invalid:not(:placeholder-shown){
+  background-color: #ff000020;
+  border-color: var(--invalid-input-color);
+}
+:focus:invalid ~ label {
+  --input-color: var(--invalid-input-color);
+}
+input:focus:valid,
+input:valid:not(:placeholder-shown){
+  background-color: #596D4820;
+  border-color: var(--valid-input-color);
+}
+:focus:valid ~ label {
+  --input-color: var(--valid-input-color);
+}
  /*
  ============
  header
@@ -245,30 +284,13 @@ inputs
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
+  color: var(--input-color);
 }
 .submit {
   background-color: rgba(238, 238, 238, 0.25);
 }
-/*
-=============
-Form styling
-=============
-*/
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"] {
-  padding: 0.3em 0.5em;
-  border: 1px solid #E5E7EB;
-  outline: none;
-  border-radius: 0.25em;
-}
-input[type="text"] {
-  text-transform: capitalize;
-}
-input[type="email"] {
-  text-transform: lowercase;
-}
+
+
 /*
    ============
    layout
@@ -283,6 +305,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+div[class^="user-"]{ /*Input containers*/
+  flex-direction: column-reverse;
 }
 .main {
     width: 100%;
