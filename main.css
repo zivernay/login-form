@@ -249,8 +249,26 @@ inputs
 .submit {
   background-color: rgba(238, 238, 238, 0.25);
 }
-
-
+/*
+=============
+Form styling
+=============
+*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  padding: 0.3em 0.5em;
+  border: 1px solid #E5E7EB;
+  outline: none;
+  border-radius: 0.25em;
+}
+input[type="text"] {
+  text-transform: capitalize;
+}
+input[type="email"] {
+  text-transform: lowercase;
+}
 /*
    ============
    layout
