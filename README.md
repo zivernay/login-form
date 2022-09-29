@@ -11,3 +11,12 @@ Skills applied
 
 Authour:
  *me*
+
+Todo
+---
+- Fix boxshadow
+- Fix tel pattern
+- Fix padding for all sections
+- Add js validation for pattern matching and password
+- Remove initial red highlights for passwords
+- Red actor code to make it more concise 
