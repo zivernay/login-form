@@ -147,21 +147,22 @@ a {
   text-decoration: none;
  }
 .credits,
- .tip,
- .sign-in {
+.tip,
+.sign-in {
   font-size: 0.6rem;
-  text-align: center;
-  text-align: right;
   padding: 0.25em 1em;
   opacity: 60%;
 }
+.credits,
+ .tip {
+  text-align: right;
+ }
 .sign-in {
   text-align: center;
 }
 .credits {
   text-shadow: 1px 3px 3px #000;
 }
-
 .credits i {
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -212,11 +213,10 @@ notice
   justify-content: center;
   background-color: rgba(238, 238, 238, 0.25);
 }
-.notice p {
+.notice .disclaimer {
   text-align: justify;
   margin: auto 0;
 }
-
 /*
 ===============
 inputs
@@ -231,7 +231,7 @@ inputs
 .inputs p,
 .inputs div {
   text-align: left;
-  padding-left: 1rem;
+  padding: 0 1rem;
 }
 .inputs h2{
   margin:0.5em 0;
@@ -291,6 +291,9 @@ figure {
 .main > .notice {
     min-height: 40vh;
 }
+.form-sign-up {
+  min-height: 100vh;
+}
 div[class^="user-"] {
     align-items: flex-start;
     width: 100%;
@@ -322,6 +325,9 @@ p {
         display: flex;
         flex-flow: column nowrap;
         justify-content: stretch
+    }
+    .form-sign-up {
+      min-height: min-content;
     }
     .engage {
         display: none;
