@@ -224,9 +224,17 @@ inputs
 */
 .inputs {
   box-shadow: 0 5px 2em #ccc ;
+  background-color: #fff;
+}
+
+.inputs h2,
+.inputs p,
+.inputs div {
+  text-align: left;
+  padding-left: 1rem;
 }
 .inputs h2{
-  margin-bottom: 1em;
+  margin:0.5em 0;
 }
 .inputs label {
   font-size: 60%;
@@ -286,8 +294,7 @@ figure {
 div[class^="user-"] {
     align-items: flex-start;
     width: 100%;
-    margin-bottom: 1em;
-    padding: 0 1em;
+    margin-bottom: 1rem;
 }
 .inputs input,
 h2,
@@ -323,7 +330,7 @@ p {
         min-height: auto;
     }
     .notice > *,
-    .inputs,
+    .inputs > *,
     .submit {
       width: clamp(360px, 100%, 720px);
     }
@@ -331,7 +338,7 @@ p {
       height: 30%;
     }
     div[class^="user-"] {
-        width: 50%;
+        width: min(720px / 2, 50%);
         flex: 0 1 auto;
     }
     .visual {/*custom style*/
